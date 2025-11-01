@@ -785,7 +785,7 @@ require('lazy').setup({
         python = { 'isort', 'black', 'pylint' },
         yaml = { 'pin_github_action' },
         dockerfile = { 'hadolint' },
-        go = { 'golangci-lint' },
+        go = { 'gofmt', 'golangci-lint' },
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
       },
