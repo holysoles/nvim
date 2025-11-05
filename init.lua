@@ -687,6 +687,15 @@ require('lazy').setup({
         },
         pyright = {},
         dockerls = {},
+        yamlls = {
+          settings = {
+            yaml = {
+              schemas = {
+                ['kubernetes'] = '*.k8s.yaml',
+              },
+            },
+          },
+        },
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -783,7 +792,7 @@ require('lazy').setup({
         lua = { 'stylua' },
         markdown = { 'markdown-toc' },
         python = { 'isort', 'black', 'pylint' },
-        yaml = { 'pin_github_action' },
+        yaml = { 'yamlfmt', 'pin_github_action' },
         dockerfile = { 'hadolint' },
         go = { 'gofmt', 'golangci-lint' },
         -- You can use 'stop_after_first' to run the first available formatter from the list
