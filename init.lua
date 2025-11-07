@@ -696,6 +696,7 @@ require('lazy').setup({
             },
           },
         },
+        groovyls = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -795,6 +796,10 @@ require('lazy').setup({
         yaml = { 'yamlfmt', 'pin_github_action' },
         dockerfile = { 'hadolint' },
         go = { 'gofmt', 'golangci-lint' },
+        xml = { 'xmlformat' },
+        groovy = { 'npm-groovy-lint' },
+        --
+        -- Conform can also run multiple formatters sequentially
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
       },
@@ -802,6 +807,11 @@ require('lazy').setup({
         pin_github_action = {
           command = 'pin-github-action',
           args = { '$FILENAME' },
+          stdin = false,
+        },
+        ['npm-groovy-lint'] = {
+          command = vim.fn.stdpath 'data' .. '/mason/bin/npm-groovy-lint',
+          args = { '--format', '$FILENAME' },
           stdin = false,
         },
       },
