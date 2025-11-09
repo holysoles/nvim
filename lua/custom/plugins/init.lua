@@ -16,6 +16,7 @@ return {
     opts = {
       -- configuration goes here
     },
+    event = 'VeryLazy',
   },
   {
     'andythigpen/nvim-coverage',
@@ -25,6 +26,7 @@ return {
         auto_reload = true,
       }
     end,
+    event = 'VeryLazy',
   },
   {
     'qvalentin/helm-ls.nvim',
