@@ -14,7 +14,7 @@ return {
       'MunifTanjim/nui.nvim',
     },
     opts = {
-      -- configuration goes here
+      lang = 'golang',
     },
     event = 'VeryLazy',
   },
