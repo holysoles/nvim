@@ -1093,5 +1093,21 @@ vim.api.nvim_create_user_command('FormatEnable', function()
 end, {
   desc = 'Re-enable autoformat-on-save',
 })
+
+-- aliases
+vim.cmd [[cab cc CodeCompanion]]
+vim.cmd [[cab ccc CodeCompanionCLI]]
+-- Copy absolute path
+vim.keymap.set('n', '<leader>pa', function()
+  vim.fn.setreg('+', vim.fn.expand '%:p')
+  print('Copied absolute path: ' .. vim.fn.expand '%:p')
+end, { desc = 'Copy absolute file path' })
+
+-- Copy relative path
+vim.keymap.set('n', '<leader>pr', function()
+  vim.fn.setreg('+', vim.fn.expand '%')
+  print('Copied relative path: ' .. vim.fn.expand '%')
+end, { desc = 'Copy relative file path' })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
