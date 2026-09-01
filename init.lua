@@ -1007,6 +1007,8 @@ require('lazy').setup({
     -- archived so use commit
     -- branch = 'main',
     commit = '90cd658',
+    -- main = 'nvim-treesitter.configs', -- Sets main module to use for opts
+    -- branch = 'master',
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'yaml', 'helm' },
